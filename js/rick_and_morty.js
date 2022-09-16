@@ -53,7 +53,7 @@ function start(obj){
 
 function test(){
   if(comp !== url){
-    if (div.clientHeight === (window.innerHeight + window.scrollY)){
+    if ((div.clientHeight)  === (window.innerHeight + (window.scrollY || window.pageYOffset))){
       console.log(url);
       req(url);
     }
