@@ -8,7 +8,6 @@ body{
 #wrapper {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 20px;
 }
 
 #container {
@@ -117,6 +116,28 @@ h3 {
     margin-top: 110px;
 }
 
+#land {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(46,24,83,1);
+    position: fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+    opacity: 100%;
+}
+
+#land:first-child {
+    font-size: 450%;
+    text-align: center;
+    animation-name: appear;
+    animation-duration: 1200ms;
+    padding-top: 40vh;
+}
+
 @keyframes resp {
     from{box-shadow: 10px 10px 15px #B3D929; border-color: #04ADBF;}
     to {box-shadow: 10px 10px 15px #04ADBF; border-color: rgba(245,57,254,1);}
@@ -125,4 +146,16 @@ h3 {
 @keyframes button {
     from{background-color: rgb(216, 216, 52);;}
     to {background-color: rgba(245,57,254,1);}
+}
+
+@keyframes appear {
+    0%{padding-top: 100vh;}
+    50%{padding-top: 40vh;}
+    75%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+@keyframes hi {
+    from{opacity: 0%;}
+    to{opacity: 100%;}
 }

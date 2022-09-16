@@ -6,6 +6,8 @@ let counter2 = document.getElementById('counter2');
 let counter3 = document.getElementById('counter3');
 let counter4 = document.getElementById('counter4');
 let button = document.getElementById('button');
+let land = document.getElementById('land');
+let tapa = document.getElementById('tapa');
 
 function req(url) {
   fetch(url)
@@ -56,6 +58,10 @@ function start(obj){
 
 }
 
+function landing (el) {
+  land.style.display = 'none';
+}
+
 function test(){
   /*
   counter1.textContent = (`Div Client Height: ${div.clientHeight} Container Height: ${document.getElementById('container').clientHeight * 2}`);
@@ -71,6 +77,9 @@ function test(){
 }
 
 button.addEventListener('click', test);
+
+setInterval(landing, 1100);
+
 
 req(url);
 
