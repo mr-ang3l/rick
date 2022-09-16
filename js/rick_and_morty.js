@@ -1,6 +1,10 @@
 let url = 'https://rickandmortyapi.com/api/character';
 let comp;
 let div = document.querySelector('#wrapper');
+let counter1 = document.getElementById('counter1');
+let counter2 = document.getElementById('counter2');
+let counter3 = document.getElementById('counter3');
+let counter4 = document.getElementById('counter4');
 
 function req(url) {
   fetch(url)
@@ -52,6 +56,11 @@ function start(obj){
 }
 
 function test(){
+  counter1.textContent = (`Div Client Height: ${div.clientHeight}`);
+  counter2.innerText = (`Window Inner Height: ${window.innerHeight}`);
+  counter3.innerText = "Scroll Y:" + (window.scrollY || window.pageYOffset);
+  counter4.innerText = "¿Da a cero?: " + ((div.clientHeight)  - (window.innerHeight + (window.scrollY || window.pageYOffset)));
+
   if(comp !== url){
     if ((div.clientHeight)  === (window.innerHeight + (window.scrollY || window.pageYOffset))){
       console.log(url);
