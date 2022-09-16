@@ -62,7 +62,7 @@ function test(){
   counter4.innerText = "¿Da a cero?: " + ((div.clientHeight)  - (window.innerHeight + (window.scrollY || window.pageYOffset)));
 
   if(comp !== url){
-    if ((div.clientHeight)  === (window.innerHeight + (window.scrollY || window.pageYOffset))){
+    if (((div.clientHeight)  - (window.innerHeight + (window.scrollY || window.pageYOffset))) === -16){
       console.log(url);
       req(url);
     }
