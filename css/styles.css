@@ -131,7 +131,7 @@ h3 {
     opacity: 100%;
 }
 
-#land:first-child {
+.s-animado {
     font-size: 450%;
     text-align: center;
     animation-name: appear;

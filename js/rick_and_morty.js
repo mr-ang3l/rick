@@ -8,6 +8,8 @@ let counter4 = document.getElementById('counter4');
 let button = document.getElementById('button');
 let land = document.getElementById('land');
 let tapa = document.getElementById('tapa');
+let saludo = document.getElementById('saludo');
+let nombre = prompt('What is your name?');
 
 function req(url) {
   fetch(url)
@@ -72,15 +74,24 @@ function test(){
 
   if(comp !== url){
       console.log(url);
+      console.log(nombre);
       req(url);
   }
 }
 
+
+function user() {
+  if (nombre){
+    saludo.textContent = `Hi, ${nombre}!`;
+  }
+  saludo.className = 's-animado';
+  setInterval(landing, 1100);
+}
+  
+
 button.addEventListener('click', test);
 
-setInterval(landing, 1100);
-
-
+user();
 req(url);
 
 /* document.body.clientHeight
