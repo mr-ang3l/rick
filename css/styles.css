@@ -31,6 +31,9 @@ body{
     box-shadow: 10px 10px 15px #04ADBF;
     border-color: rgba(245,57,254,1);
     background-color: rgb(241, 241, 120);
+    animation-name: scale;
+    animation-duration: 300ms;
+    transform: scale(1.1, 1.1);
 }
 
 
@@ -159,4 +162,9 @@ h3 {
 @keyframes hi {
     from{opacity: 0%;}
     to{opacity: 100%;}
+}
+
+@keyframes scale {
+    from{transform: scale(1, 1);}
+    to{transform: scale(1.1, 1.1);}
 }
