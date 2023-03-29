@@ -62,6 +62,7 @@ function start(obj){
 
 function landing (el) {
   land.style.display = 'none';
+  req(url);
 }
 
 function test(){
@@ -85,14 +86,13 @@ function user() {
     saludo.textContent = `Hi, ${nombre}!`;
   }
   saludo.className = 's-animado';
-  setInterval(landing, 1100);
+  setTimeout(landing, 1100);
 }
   
 
 button.addEventListener('click', test);
 
 user();
-req(url);
 
 /* document.body.clientHeight
 window.innerHeight
