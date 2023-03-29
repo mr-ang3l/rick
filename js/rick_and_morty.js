@@ -36,7 +36,7 @@ function start(obj){
         name.textContent = 'Name: ' + characters[char]['name'];
         status.textContent = 'Status: ' + characters[char]['status'];
         species.textContent = 'Species: ' + characters[char]['species'];
-        gender.textContent = 'Name: ' + characters[char]['gender'];
+        gender.textContent = 'Gender: ' + characters[char]['gender'];
         img.setAttribute('src', characters[char]['image']);
         img.setAttribute('id', 'img');
 
